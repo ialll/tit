@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>tit</artifactId>
+    <groupId>com.tit</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.tit</groupId>
+  <artifactId>tit_admin</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>tit_admin</name>
+  <modules>
+  	<module>tit_admin_common</module>
+  	<module>tit_admin_control</module>
+  	<module>tit_admin_invoke</module>
+  	<module>tit_admin_jar</module>
+  	<module>tit_admin_model</module>
+  	<module>tit_admin_war</module>
+  	<module>tit_admin_war</module>
+  </modules>
+</project>
