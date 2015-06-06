@@ -1,8 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project-modules id="moduleCoreId" project-version="1.5.0">
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="tit_admin_war">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <dependent-module archiveName="tit_admin_common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_common/tit_admin_common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tit_admin_model.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_model/tit_admin_model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tit_admin_control.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_control/tit_admin_control">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tit_admin_domain.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_domain/tit_admin_domain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="tit_admin_war"/>
         <property name="java-output-path" value="/tit_admin_war/target/classes"/>
     </wb-module>

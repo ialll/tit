@@ -7,9 +7,8 @@
     <groupId>com.tit</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.tit</groupId>
   <artifactId>tit_admin_control</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>tit_admin_control</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -21,6 +20,11 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.tit</groupId>
+    	<artifactId>tit_admin_domain</artifactId>
+    	<version>${project.version}</version>
     </dependency>
   </dependencies>
 </project>

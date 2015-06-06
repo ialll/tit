@@ -16,7 +16,7 @@
   	<module>tit_admin_invoke</module>
   	<module>tit_admin_jar</module>
   	<module>tit_admin_model</module>
-  	<module>tit_admin_war</module>
+  	<module>tit_admin_domain</module>
   	<module>tit_admin_war</module>
   </modules>
 </project>
