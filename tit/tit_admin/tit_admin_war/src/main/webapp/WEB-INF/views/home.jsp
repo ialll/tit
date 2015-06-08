@@ -1,8 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page session="false" contentType="text/html; charset=UTF-8"%>
 <html>
 <head>
-	<title>spring-mvc-showcase</title>
+	<title>spring-mvc DEMO</title>
 	<link href="<c:url value="/resources/form.css" />" rel="stylesheet"  type="text/css" />		
 	<link href="<c:url value="/resources/jqueryui/1.8/themes/base/jquery.ui.core.css" />" rel="stylesheet" type="text/css"/>
 	<link href="<c:url value="/resources/jqueryui/1.8/themes/base/jquery.ui.theme.css" />" rel="stylesheet" type="text/css"/>
@@ -16,8 +16,8 @@
 	<meta name="_csrf_header" content="${_csrf.headerName}"/>
 </head>
 <body>
-<h1><a href="<c:url value="/" />">spring-mvc-showcase</a></h1>
-<p>Recommended: Using a Web Developer tool such a Firebug to inspect the client/server interaction</p>
+<h1><a href="<c:url value="/" />">spring-mvc-demo</a></h1>
+<p>spring mvc 框架demo</p>
 <div id="tabs">
 	<ul>
 		<li><a href="#simple">Simple</a></li>
@@ -33,6 +33,7 @@
 		<li><a href="#exceptions">Exception Handling</a></li>
 		<li><a href="#redirect">Redirecting</a></li>
         <li><a href="#async">Async Requests</a></li>
+        <li><a href="#db">DB</a></li>
     </ul>
     <div id="simple">
 		<h2>Simple</h2>
@@ -445,6 +446,17 @@
 			<a id="deferredResultTimeoutValueLink" class="textLink"
 				href="<c:url value="/async/deferred-result/timeout-value" />">GET /async/deferred-result/timeout-value</a>
 		</li>
+		</ul>
+	</div>
+	<div id="db">
+		<h2>dbtest</h2>
+		<p>
+			db 数据库连接测试
+		</p>
+		<ul>
+			<li>
+				<a id="mysql" class="textLink" href="<c:url value="/DBtest/direct" />">mysql</a>
+			</li>
 		</ul>
 	</div>
 </div>

@@ -2,6 +2,7 @@
     <wb-module deploy-name="tit_admin_war">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes/config" source-path="/config"/>
         <dependent-module archiveName="tit_admin_common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_common/tit_admin_common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
@@ -11,7 +12,10 @@
         <dependent-module archiveName="tit_admin_control.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_control/tit_admin_control">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="tit_admin_domain.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_domain/tit_admin_domain">
+        <dependent-module archiveName="tit_admin_service.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_service/tit_admin_service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tit_admin_dao.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tit_admin_dao/tit_admin_dao">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="tit_admin_war"/>

@@ -17,9 +17,14 @@
             <version>3.8.1</version>  
             <scope>test</scope>  
         </dependency>  
-          <dependency>
+     <dependency>
     	<groupId>com.tit</groupId>
     	<artifactId>tit_admin_common</artifactId>
+    	<version>${project.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.tit</groupId>
+    	<artifactId>tit_admin_control</artifactId>
     	<version>${project.version}</version>
     </dependency>
  </dependencies>  

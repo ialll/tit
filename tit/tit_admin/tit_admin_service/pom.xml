@@ -7,9 +7,9 @@
     <groupId>com.tit</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>tit_admin_domain</artifactId>
+  <artifactId>tit_admin_service</artifactId>
   <packaging>jar</packaging>
-  <name>tit_admin_domain</name>
+  <name>tit_admin_service</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,7 +23,7 @@
     </dependency>
     <dependency>
     	<groupId>com.tit</groupId>
-    	<artifactId>tit_admin_model</artifactId>
+    	<artifactId>tit_admin_dao</artifactId>
     	<version>${project.version}</version>
     </dependency>
   </dependencies>
