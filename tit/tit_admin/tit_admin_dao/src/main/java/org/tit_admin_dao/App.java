@@ -1,4 +1,4 @@
-package org.tit_admin_domain;
+package org.tit_admin_dao;
 
 /**
  * Hello world!

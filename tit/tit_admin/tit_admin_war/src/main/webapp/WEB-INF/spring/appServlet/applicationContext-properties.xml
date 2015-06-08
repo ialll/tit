@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+    <util:properties id="mdbProps" location="classpath:/config/props/mongodb.properties" />
+    <util:properties id="dbProps" location="classpath:/config/props/database.properties" />
+    <util:properties id="logProps" location="classpath:/config/props/log4j.properties" />
+    <util:properties id="amProps" location="classpath:/config/props/api.messages.properties" />
+    <util:properties id="heProps" location="classpath:/config/props/http.error.messages.properties" />
+    <util:properties id="fProps"
+                     location="classpath:/config/props/yourwebproject.properties" />
+    <util:properties id="msgProps" location="classpath:/config/props/messages.properties" />
+    <util:properties id="mailProps" location="classpath:/config/props/mail.properties" />
+
+</beans>
