@@ -7,4 +7,6 @@ public interface DBTestService {
 	 * @throws Exception
 	 */
 	public String testDB() throws Exception;
+
+	public String testDBByMyBatis(int id);
 }
