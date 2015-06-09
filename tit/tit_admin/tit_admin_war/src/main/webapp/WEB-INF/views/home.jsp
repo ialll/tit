@@ -457,6 +457,9 @@
 			<li>
 				<a id="mysql" class="textLink" href="<c:url value="/DBtest/direct" />">mysql</a>
 			</li>
+			<li>
+				<a id="mysql-mybatis" class="textLink" href="<c:url value="/DBtest/MyBatisTest" />">MyBatis测试</a>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -514,7 +517,7 @@ $(document).ready(function() {
 
 	$("a.textLink").click(function(){
 		var link = $(this);
-		$.ajax({ url: link.attr("href"), dataType: "text", success: function(text) { MvcUtil.showSuccessResponse(text, link); }, error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, link); }});
+		$.ajax({ url: link.attr("href"), dataType: "text",beforeSend: function(req) { req.setRequestHeader("Accept", "text/plain;charset=UTF-8"); }, success: function(text) { MvcUtil.showSuccessResponse(text, link); }, error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, link); }});
 		return false;
 	});
 

@@ -20,4 +20,14 @@ public class DBTestController {
 		}
 		return "Hello world!";
 	}
+	@RequestMapping("/MyBatisTest")
+	public @ResponseBody String myBatisTest() {
+		String result="";
+		try {
+			result=dbTestService.testDBByMyBatis(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }

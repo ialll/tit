@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.tit_admin_dao.demo.DBTestDao;
-@Repository
+@Repository("dbTestDaoImpl")
 public class DBTestDaoImpl implements DBTestDao{
 	private @Autowired JdbcTemplate springJDBCTemplate;
 	@Override
