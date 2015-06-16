@@ -59,5 +59,39 @@
 	<!-- Disables Servlet Container welcome file handling. Needed for compatibility with Servlet 3.0 and Tomcat 7.0 -->
 	<welcome-file-list>
 		<welcome-file></welcome-file>
-	</welcome-file-list>	
+	</welcome-file-list>
+	
+    <!-- Other properly handled errors -->
+    <error-page>
+        <error-code>401</error-code>
+        <location>/api/errors/401</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/api/errors/404</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/api/errors/405</location>
+    </error-page>
+    <error-page>
+        <error-code>408</error-code>
+        <location>/api/errors/408</location>
+    </error-page>
+    <error-page>
+        <error-code>415</error-code>
+        <location>/api/errors/415</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/api/errors/500</location>
+    </error-page>
+    <error-page>
+        <error-code>501</error-code>
+        <location>/api/errors/501</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/api/errors/503</location>
+    </error-page>	
 </web-app>
