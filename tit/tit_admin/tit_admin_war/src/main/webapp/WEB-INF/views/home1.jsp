@@ -34,6 +34,7 @@
 		<li><a href="#redirect">Redirecting</a></li>
         <li><a href="#async">Async Requests</a></li>
         <li><a href="#db">DB</a></li>
+        <li><a href="<c:url value="/tt" />" title="tt">tt</a></li>
     </ul>
     <div id="simple">
 		<h2>Simple</h2>
