@@ -64,34 +64,34 @@
     <!-- Other properly handled errors -->
     <error-page>
         <error-code>401</error-code>
-        <location>/api/errors/401</location>
+        <location>/errors/401</location>
     </error-page>
     <error-page>
         <error-code>404</error-code>
-        <location>/api/errors/404</location>
+        <location>/errors/404</location>
     </error-page>
     <error-page>
         <error-code>405</error-code>
-        <location>/api/errors/405</location>
+        <location>/errors/405</location>
     </error-page>
     <error-page>
         <error-code>408</error-code>
-        <location>/api/errors/408</location>
+        <location>/errors/408</location>
     </error-page>
     <error-page>
         <error-code>415</error-code>
-        <location>/api/errors/415</location>
+        <location>/errors/415</location>
     </error-page>
     <error-page>
         <error-code>500</error-code>
-        <location>/api/errors/500</location>
+        <location>/errors/500</location>
     </error-page>
     <error-page>
         <error-code>501</error-code>
-        <location>/api/errors/501</location>
+        <location>/errors/501</location>
     </error-page>
     <error-page>
         <error-code>503</error-code>
-        <location>/api/errors/503</location>
+        <location>/errors/503</location>
     </error-page>	
 </web-app>

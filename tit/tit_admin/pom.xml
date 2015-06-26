@@ -10,7 +10,30 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>tit_admin</name>
-	<modules>
+  <properties>
+        <jacksonMapper.version>1.9.2</jacksonMapper.version>
+        <jacksonCore.version>1.9.2</jacksonCore.version>
+
+    </properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.thoughtworks.xstream</groupId>
+  		<artifactId>xstream</artifactId>
+  		<version>1.4.8</version>
+  	</dependency>
+  	 <!-- Jackson JSON Processor -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jacksonMapper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>${jacksonCore.version}</version>
+        </dependency>
+  </dependencies>
+  <modules>
 		<module>tit_admin_common</module>
 		<module>tit_admin_control</module>
 		<module>tit_admin_invoke</module>

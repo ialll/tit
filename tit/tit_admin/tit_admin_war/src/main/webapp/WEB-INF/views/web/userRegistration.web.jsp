@@ -89,7 +89,7 @@
 
                     <div class="controls">
                         <input type="text" disabled="disabled"
-                               class="input-xlarge disabled" id="country" name="country" value="India"/>
+                               class="input-xlarge disabled" id="country" name="country" value="China"/>
                     </div>
                 </div>
 

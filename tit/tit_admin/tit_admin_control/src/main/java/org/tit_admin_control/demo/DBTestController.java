@@ -4,11 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.tit_admin_control.core.BaseApiController;
 import org.tit_admin_service.demo.DBTestService;
 
 @Controller
 @RequestMapping("/DBtest")
-public class DBTestController {
+public class DBTestController extends BaseApiController{
 	private @Autowired DBTestService dbTestService;
 	@RequestMapping("/direct")
 	public @ResponseBody String simple() {
