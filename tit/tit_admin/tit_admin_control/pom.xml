@@ -26,5 +26,10 @@
     	<artifactId>tit_admin_service</artifactId>
     	<version>${project.version}</version>
     </dependency>
+    <dependency>
+    	<groupId>com.tit</groupId>
+    	<artifactId>tit_admin_common</artifactId>
+    	<version>${project.version}</version>
+    </dependency>
   </dependencies>
 </project>
