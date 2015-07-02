@@ -41,10 +41,11 @@ public class ExceptionHandlerAdvice implements ThrowsAdvice {
     public void afterThrowing(Method m, Object[] args, Object target, Throwable ex) {
         log.error("Exception in method: " + m.getName() + " Exception is: " + ex.getMessage());
 
-        if (response != null)
+        if (response != null){
             response.setError(500, ex.getMessage());
 
         log.error("Response: " + response.toString());
+        }
     }
 
 
@@ -59,10 +60,11 @@ public class ExceptionHandlerAdvice implements ThrowsAdvice {
     public void afterThrowing(Method m, Object[] args, Object target, Exception ex) {
         log.error("Exception in method: " + m.getName() + " Exception is: " + ex.getMessage());
 
-        if (response != null)
+        if (response != null){
             response.setError(500, ex.getMessage());
 
         log.error("Response: " + response.toString());
+        }
     }
 
 }
