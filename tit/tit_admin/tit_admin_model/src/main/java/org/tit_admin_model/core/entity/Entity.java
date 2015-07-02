@@ -18,13 +18,13 @@ public @Data class Entity implements Serializable {
 	 */
 	private static final long serialVersionUID = 5984680201973125214L;
 	protected @XStreamOmitField int id;
-    protected @XStreamOmitField Date createdAt;
-    protected @XStreamOmitField Date updatedAt;
+    protected @XStreamOmitField Date createDt;
+    protected @XStreamOmitField Date updateDt;
 
 
     public Entity() {
-        createdAt = new Date();
-        updatedAt = new Date();
+        createDt = new Date();
+        updateDt = new Date();
     }
 
 
@@ -35,9 +35,9 @@ public @Data class Entity implements Serializable {
      * @return
      */
     public Object readResolve() {
-        if (this.createdAt == null) {
-            this.createdAt = new Date();
-            this.updatedAt = createdAt;
+        if (this.createDt == null) {
+            this.createDt = new Date();
+            this.updateDt = createDt;
         }
 
         return this;

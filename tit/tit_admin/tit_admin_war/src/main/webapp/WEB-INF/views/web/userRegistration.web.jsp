@@ -100,8 +100,8 @@
                         <input type="text" class="input-xlarge" id="postalCode" name="postalCode"/>
                     </div>
                 </div>
-
-                <input class="btn btn-primary btn-large" type="submit" value="Register"/>
+	            <input type="hidden" id="_csrf" />
+                <input class="btn btn-primary btn-large" type="submit" id="registerBut" value="Register"/>
                 <a href="${pageContext.request.contextPath}/home" class="btn btn-large">Cancel</a>
 
             </div>
@@ -163,5 +163,16 @@
                 }
             }
         });
+    $("#registerBut").click(function (){
+    	var token = $("meta[name='_csrf']").attr("content");
+    	var header = $("meta[name='_csrf_header']").attr("content");
+    	$('#_csrf').attr('name','_csrf');
+    	$('#_csrf').attr('value',token);
+    });
+/*     var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
+	$(document).ajaxSend(function(e, xhr, options) {
+		xhr.setRequestHeader(header, token);
+	}); */
     });
 </script>
