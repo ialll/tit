@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.tit_admin_common.core.Validity;
+import org.tit_admin_model.core.entity.User;
 import org.tit_admin_model.core.entity.request.UserRO;
+import org.tit_admin_service.core.UserService;
 
 import java.util.Locale;
 
@@ -23,7 +25,7 @@ import java.util.Locale;
 @Controller
 public class UserController extends BaseApiController {
     private Logger log = LoggerFactory.getLogger(UserController.class);
-    //private @Autowired UserService userService;
+    private @Autowired UserService userService;
     //private @Autowired MailSenderActor mailSenderActor;
 
 
@@ -106,16 +108,17 @@ public class UserController extends BaseApiController {
                 mailSenderActor.sendUserEmailIdConfirmationMail(u);
                 request.getSession(true).setAttribute(Key.userInSession, u);
                 model.addAttribute(Key.isRegister, true);
-                return Key.redirect + Route.dashboard;
+                return "redirect:"+ "/dashboard";
             } else {
-                addError(msg.registerError, model);
-                return View.userRegistration;
+            	model.addAttribute("error", true);
+                model.addAttribute("errorMessage", msg.registerError);
+                return "userRegistration";
             }
         } catch (Exception e) {
             log.error(e.getMessage());
-            addError(msg.registerError, model);
-            addError(e.getMessage(), model);
-            return View.userRegistration;
+            model.addAttribute("error", true);
+            model.addAttribute("errorMessage", msg.registerError);
+            return "userRegistration";
         }
     }
 

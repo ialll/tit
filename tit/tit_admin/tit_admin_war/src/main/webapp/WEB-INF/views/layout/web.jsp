@@ -4,6 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--
+		Used for including CSRF token in JSON requests
+		Also see bottom of this file for adding CSRF token to JQuery AJAX requests
+	-->
+	<meta name="_csrf" content="${_csrf.token}"/>
+	<meta name="_csrf_header" content="${_csrf.headerName}"/>
     <title><tiles:insertAttribute name="title" ignore="true"/></title>
     <link rel="stylesheet" href="resources/bootstrap/css/united.bootstrap.min.css"/>
     <link rel="stylesheet" href="resources/css/app.css"/>
