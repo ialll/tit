@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.tit_admin_common.core.Validity;
+import org.tit_admin_control.core.actor.MailSenderActor;
 import org.tit_admin_model.core.entity.User;
 import org.tit_admin_model.core.entity.request.UserRO;
 import org.tit_admin_service.core.UserService;
@@ -26,7 +27,7 @@ import java.util.Locale;
 public class UserController extends BaseApiController {
     private Logger log = LoggerFactory.getLogger(UserController.class);
     private @Autowired UserService userService;
-    //private @Autowired MailSenderActor mailSenderActor;
+    private @Autowired MailSenderActor mailSenderActor;
 
 
     /**
@@ -106,8 +107,8 @@ public class UserController extends BaseApiController {
             if (validity.isValid()) {
                 userService.registerUser(u, request);
                 mailSenderActor.sendUserEmailIdConfirmationMail(u);
-                request.getSession(true).setAttribute(Key.userInSession, u);
-                model.addAttribute(Key.isRegister, true);
+                request.getSession(true).setAttribute("org.tit.user", u);
+                model.addAttribute("rs", true);
                 return "redirect:"+ "/dashboard";
             } else {
             	model.addAttribute("error", true);

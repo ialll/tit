@@ -1,6 +1,10 @@
 package org.tit_admin_control.core.actor.impl;
 
 import akka.actor.TypedActor;
+import akka.actor.TypedActorExtension;
+import akka.actor.TypedActorFactory;
+import akka.actor.UntypedActor;
+
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -8,6 +12,9 @@ import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.ui.velocity.VelocityEngineUtils;
 import org.tit_admin_control.core.actor.MailSenderActor;
 import org.tit_admin_common.core.Props;
+import org.tit_admin_common.core.exception.service.NotYetImplementedException;
+import org.tit_admin_model.core.entity.User;
+
 import javax.mail.internet.MimeMessage;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,18 +24,20 @@ import java.util.Map;
  *
  * @author: 刘晓勇
  */
-public class MailSenderActorImpl extends TypedActor implements MailSenderActor {
+public class MailSenderActorImpl extends UntypedActor implements MailSenderActor {
     private VelocityEngine velocityEngine;
     private JavaMailSender javaMailSender;
     private Props props;
 
 
-    @Override public void sendUserEmailIdVerificationMail(User user) throws NotYetImplementedException {
+    @Override 
+    public void sendUserEmailIdVerificationMail(User user) throws NotYetImplementedException {
         throw new NotYetImplementedException("email verification");
     }
 
 
-    @Override public void sendUserEmailIdConfirmationMail(final User user) {
+    @Override 
+    public void sendUserEmailIdConfirmationMail(final User user) {
         Map model = new HashMap();
         model.put("user", user);
 
